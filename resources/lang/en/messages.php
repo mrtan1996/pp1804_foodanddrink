@@ -41,5 +41,7 @@ return [
     'qualitymess' => 'All food are in good quality and we are responsible for your hungry',
     'toprate' => 'Top-Rated Food',
     'order' => 'Order',
+    'logout' => 'Logout',
+
 
 ];

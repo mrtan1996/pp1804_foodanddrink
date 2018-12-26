@@ -43,6 +43,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">{{ trans('messages.services') }}</a>
                             </li>    
+                            <li class="nav-item">
+                                <a class="nav-link" href="logout">{{ trans('messages.logout') }}</a>
+                            </li>   
                         @else
                             <li class="nav-item active">
                                 <a class="nav-link" href="{{ route('login') }}">{{ trans('messages.login') }} <span class="sr-only">(current)</span></a>

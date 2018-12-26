@@ -8,5 +8,8 @@ $factory->define(App\Model\User::class, function (Faker $faker) {
         'email' => $faker->unique()->safeEmail,
         'password' => $faker->password,
         'remember_token' => str_random(10),
+        'role' => rand(1,2),
+
+        
     ];
 });
