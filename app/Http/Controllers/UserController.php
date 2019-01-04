@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\User;
+use Auth;
 
 class UserController extends Controller
 {
@@ -91,4 +92,29 @@ class UserController extends Controller
 
         return redirect()->route('users.index');
     }
+
+    public function profile()
+    {
+        $id = Auth::user()->id;
+        $user = User::findOrFail($id);
+
+        return view('user.profile.profile', compact('user'));
+    }
+
+    public function editprofile()
+    {
+        $id = Auth::user()->id;
+        $user = User::findOrFail($id);
+
+        return view('user.profile.edit', compact('user'));
+    }
+    
+    public function saveprofile(Request $request, $id)
+    {
+        $user = User::findOrFail($id);
+        $listUser = $user->update($request->all());
+
+        return redirect()->route('home');
+    }
+
 }
