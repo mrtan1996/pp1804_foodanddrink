@@ -32,7 +32,7 @@
                     @if (Route::has('login'))
                         @auth
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">{{ trans('messages.home') }} <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="profile">{{ trans('messages.profile') }} <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">{{ trans('messages.menu') }}</a>
@@ -41,11 +41,11 @@
                                 <a class="nav-link" href="#">{{ trans('messages.cart') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">{{ trans('messages.services') }}</a>
+                                <a class="nav-link" href="/logout">{{ trans('messages.logout') }}</a>
                             </li>    
                         @else
                             <li class="nav-item active">
-                                <a class="nav-link" href="{{ route('login') }}">{{ trans('messages.login') }} <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">{{ trans('messages.login') }} <span class="sr-only">(current)</span></a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item active">
@@ -72,7 +72,7 @@
     </div>
     <div class="noidung2">
         <div class="container">
-            <div class="row">
+            <div class="row"> 
                 <div class="col-sm-12">
                     <div class="text-sm-center">
                         <h3 class="m-5 tieudeto">At Your Service</h3>
@@ -176,13 +176,142 @@
             </div>
         </div>
     </div> <!-- het noidung3 -->
+    <div class="footer">
+        <div class="footer-grid">
+            <h3>Navigation</h3>
+            <ul class="list1">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="radio.html">All Foods</a></li>
+              <li><a href="browse.html">Menu</a></li>
+              <li><a href="radio.html">New Category</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-grid">
+            <h3>Our Account</h3>
+            <ul class="list1">
+              <li><a href="#" data-toggle="modal" data-target="#myModal5">Your Account</a></li>
+              <li><a href="#">Personal information</a></li>
+              <li><a href="#">Addresses</a></li>
+              <li><a href="#">Discount</a></li>
+              <li><a href="#">Orders history</a></li>
+              <li><a href="#">Addresses</a></li>
+              <li><a href="#">Search Terms</a></li>
+            </ul>
+        </div>
+        <div class="footer-grid">
+            <h3>Our Support</h3>
+            <ul class="list1">
+              <li><a href="contact.html">Site Map</a></li>
+              <li><a href="#">Search Terms</a></li>
+              <li><a href="#">Advanced Search</a></li>
+              <li><a href="#">Mobile</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="#">Mobile</a></li>
+              <li><a href="#">Addresses</a></li>
+            </ul>
+        </div>
+            <div class="footer-grid">
+                <h3>Newsletter</h3>
+                <p class="footer_desc">Follow us for news and free food recipe inside and outside of your country traditional.</p>
+                <div class="search_footer">
+                    <form>
+                        <input type="text" placeholder="Email...." required="">
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+            <div class="footer-grid footer-grid_last">
+                <h3>About Us</h3>
+                <p class="footer_desc">Some food blogger and dev joining together to create a website that bring quality food to others.</p>
+                <p class="f_text">Phone:  &nbsp;&nbsp;&nbsp;00-250-2131</p>
+                <p class="email">Email : &nbsp;<span><a href="mailto:mail@example.com">info(at)mailing.com</a></span></p>   
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" id="loginModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="loginModallabel">{{ trans('messages.signin')}}</h4>
+                    <button type="button" name="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- modal login -->
+                    <form method="POST" action="{{ route('login') }}">
+                        @csrf
+
+                        <div class="form-group row">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+
+                                @if ($errors->has('email'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+
+                                @if ($errors->has('password'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-6 offset-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                    <label class="form-check-label" for="remember">
+                                        {{ __('Remember Me') }}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Login') }}
+                                </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    @if (Route::has('password.request'))
+                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
+                        </a>
+                    @endif
+                    <a href="{{route('register')}}" class="text-center">Register New Member</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- jquery -->
 
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script type="text/javascript"></script>
     
-    <!-- bootstrap <-->
+    <!-- bootstrap -->
     
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 </body>

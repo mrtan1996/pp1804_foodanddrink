@@ -11,9 +11,9 @@
 |
 */
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('user.home');
-});*/
+});
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
@@ -22,3 +22,9 @@ Route::get('/logout', 'Auth\LoginController@logout')->name('exit');
 Route::group(['prefix' => 'admin', 'middleware' => 'checkRole'], function() {
     Route::resource('users', 'UserController');
 });
+
+Route::get('/profile', 'UserController@profile')->name('profile');
+
+Route::get('/editprofile', 'UserController@editprofile')->name('editprofile');
+
+Route::post('/saveprofile/{id?}', 'UserController@saveprofile')->name('saveprofile');
