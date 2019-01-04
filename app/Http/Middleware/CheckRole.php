@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Auth;
 
 class CheckRole
 {
@@ -18,14 +19,11 @@ class CheckRole
 
         /*khi dang nhap thanh cong: Auth::check()
         Role = admin*/
-        if (Auth::check())
+        if (Auth::check() && Auth::user()->role == config('custom.role.admin'))
         {
-            if (Auth::user()->role != config('custom.role.admin')) {
-               return redirect()->route('admin.home');
-            }
-
             return $next($request);       
         }
+        
         return redirect()->route('login');
     }
 }
