@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Auth;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+
 
 class LoginController extends Controller
 {
@@ -43,5 +44,25 @@ class LoginController extends Controller
     {
         Auth::logout();
         return redirect('/home');
+
+    }
+    
+    public function login(Request $request)
+    {
+        $login = $request->all();
+        $auth = [
+            'email' => $login['email'],
+            'password' => $login['password'],
+        ];
+
+        if (Auth::attempt($auth)) {
+            if (Auth::user()->role == config('custom.role.admin')) {
+                return redirect()->route('admin.users.index');
+            }
+            
+            return redirect()->route('home');
+        }
+
+        return redirect()->back();
     }
 }
