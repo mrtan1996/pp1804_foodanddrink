@@ -28,3 +28,7 @@ Route::get('/profile', 'UserController@profile')->name('profile');
 Route::get('/editprofile', 'UserController@editprofile')->name('editprofile');
 
 Route::post('/saveprofile/{id?}', 'UserController@saveprofile')->name('saveprofile');
+
+Route::post('/popup','ModalController@popup')->name('popup');
+
+Route::get('/cartpage','UserController@cartpage')->name('cartpage');

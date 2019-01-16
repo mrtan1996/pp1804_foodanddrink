@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Model\User;
-use Auth;
 
-class UserController extends Controller
+class modal extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +13,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $listUser = User::paginate(3);
-        
-        return view('admin.user.list', compact('listUser'));
+        //
     }
 
     /**
@@ -27,7 +23,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('auth.register');
+        //
     }
 
     /**
@@ -60,9 +56,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = User::findOrFail($id);
-
-        return view('admin.user.edit', compact('user'));
+        //
     }
 
     /**
@@ -74,10 +68,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = User::findOrFail($id);
-        $listUser = $user->update($request->all());
-
-        return redirect()->route('users.index');
+        //
     }
 
     /**
@@ -88,44 +79,13 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $user = User::destroy($id);
-
-        return redirect()->route('users.index');
-    }
-
-    public function profile()
-    {
-        $id = Auth::user()->id;
-        $user = User::findOrFail($id);
-
-        return view('user.profile.profile', compact('user'));
-    }
-
-    public function editprofile()
-    {
-        $id = Auth::user()->id;
-        $user = User::findOrFail($id);
-
-        return view('user.profile.edit', compact('user'));
+        //
     }
     
-    public function saveprofile(Request $request, $id)
+    public function popup(Request $request)
     {
-        $user = User::findOrFail($id);
-        $listUser = $user->update($request->all());
+        $items = products::select($request->btn_id);
 
-        return redirect()->route('home');
+        return popup($items);
     }
-    public function cartpage()
-    {
-        return view('user.cart'); 
-    }
-    
-    /*public function popup()
-    {
-        $id = Auth::user()->id;
-        return response()
-            ->json(['btn_id'])
-            ->withCallback($request->input('callback'));
-    }*/
 }

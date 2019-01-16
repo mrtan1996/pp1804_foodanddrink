@@ -60,7 +60,7 @@
         <div class="banner">
             <div class="container-fluid">
                 <div class="col-sm push-sm-3 text-xl-center p-sm-5">
-                    <h2 class="m-5 tieudeto">SOTA FOOD</h2>
+                    <h2 class="m-5 tieudeto">NewMoutain Food</h2>
                     <div class="trichdan">{{ trans('messages.firstmess') }}</div>
                     <a href="" class="btn btn-danger m-2 nutaction">{{ trans('messages.findout') }}</a>
                 </div>
@@ -306,13 +306,8 @@
         </div>
     </div>
 
-    <!-- jquery -->
-
     <script src="{{ asset('js/jquery.min.js') }}"></script>
-    <script type="text/javascript"></script>
-    
-    <!-- bootstrap -->
-    
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    @yield('script')    
 </body>
 </html>
