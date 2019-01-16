@@ -32,3 +32,8 @@ Route::post('/saveprofile/{id?}', 'UserController@saveprofile')->name('saveprofi
 Route::post('/popup','ModalController@popup')->name('popup');
 
 Route::get('/cartpage','UserController@cartpage')->name('cartpage');
+
+Route::get('/history', 'UserController@history')->name('history');
+
+Route::get('/comment', 'UserController@comment')->name('comment');
+

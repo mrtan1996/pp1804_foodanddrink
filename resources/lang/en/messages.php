@@ -55,4 +55,5 @@ return [
     'password' => 'Password',
     'save' => 'Save',
     'editprofile' => 'Edit Profile',
+    'history' => 'History'
 ];

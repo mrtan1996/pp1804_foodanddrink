@@ -121,6 +121,15 @@ class UserController extends Controller
         return view('user.cart'); 
     }
     
+    public function history()
+    {
+        return view('user.history');
+    }
+
+    public function comment()
+    {
+        return view('user.profile.comment');
+    }
     /*public function popup()
     {
         $id = Auth::user()->id;

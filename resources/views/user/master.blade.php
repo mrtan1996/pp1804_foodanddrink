@@ -34,11 +34,14 @@
                             <li class="nav-item active">
                                 <a class="nav-link" href="profile">{{ trans('messages.profile') }} <span class="sr-only">(current)</span></a>
                             </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="history">{{ trans('messages.history') }} <span class="sr-only">(current)</span></a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">{{ trans('messages.menu') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">{{ trans('messages.cart') }}</a>
+                                <a class="nav-link" href="cartpage">{{ trans('messages.cart') }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/logout">{{ trans('messages.logout') }}</a>
