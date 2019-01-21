@@ -13,7 +13,7 @@ return [
     'shipping' => 'Shipping',
     'quality' => 'Quality',
     'category' => 'Category',
-    'quality' => 'Quality',
+    'quantity' => 'Quantity',
     'fastfood' => 'Fastfood',
     'dessert' => 'Dessert',
     'drink' => 'Drink',
@@ -55,4 +55,9 @@ return [
     'password' => 'Password',
     'save' => 'Save',
     'editprofile' => 'Edit Profile',
+    'detail' => 'Detail',
+    'close' => 'Close',
+    'totalprice' => 'Total Price',
+    'price' => 'Price',
+    'history' => 'History'
 ];
