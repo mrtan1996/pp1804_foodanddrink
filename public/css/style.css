@@ -228,6 +228,26 @@ p.email span a{
 p.email span:hover{
     text-decoration:underline; 
 }
+.modal-open .modal{
+    opacity: 1;
+    padding-top:160px;
+}
+.quantitybox{
+    height: 38px;
+    padding-bottom: 6px;
+}
+.anhproduct{
+    height: 230px;
+}    
+.user-create{
+    display: inline-block;
+}
+.create{
+    float: right;
+}
+.search{
+    float: left;
+}
 /*cart*/
 .box-don-hang{
     color:white;
@@ -258,6 +278,9 @@ p.email span:hover{
 .totalprice{
     color:red;
 }
+.name-product {
+    color: #000;
+}
 /*history*/
 
 div.history-table {
@@ -268,27 +291,4 @@ div.history-table .history-table-row .history-table-cell {
     padding: 10px 40px;
     border: 1px solid black;
 }
-.stt{
-    font-weight: bold;
-}
-.madonhang{
-    font-weight: bold;
-}
-.thoigian{
-    font-weight: bold;
-}
-.diadiem{
-    font-weight: bold;
-}
-.nhanvien{
-    font-weight: bold;
-}
-.tongtien{
-    font-weight: bold;
-}
-.trangthai{
-    font-weight: bold;
-}
-.chitiet{
-    font-weight: bold;
-}
+

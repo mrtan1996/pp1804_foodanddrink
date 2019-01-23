@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\User;
+use App\Model\Product;
 use Auth;
+use Cart;
 
 class UserController extends Controller
 {
@@ -116,9 +118,36 @@ class UserController extends Controller
 
         return redirect()->route('home');
     }
+
+    public function saveCart(Request $request)
+    {
+        $product = Product::findOrFail($request->product_id);
+
+        Cart::add(array(
+            'id' => $product->id,
+            'name' => $product->name,
+            'price' => $product->prise,
+            'quantity' => $request->quantity,
+            'image' => $product->images,
+        ));
+
+        return response()->json($product);
+    
+    }
+
     public function cartpage()
     {
-        return view('user.cart'); 
+        $cartCollection = Cart::getContent();
+        $cartCollection->toArray();
+
+        return view('user.cart', compact('cartCollection')); 
+    }
+
+    public function removeCartItem(Request $request, $id)
+    {
+        Cart::remove($id);
+        
+        return redirect()->route(cartpage);
     }
     
     public function history()
@@ -130,11 +159,9 @@ class UserController extends Controller
     {
         return view('user.profile.comment');
     }
-    /*public function popup()
+
+    public function menu()
     {
-        $id = Auth::user()->id;
-        return response()
-            ->json(['btn_id'])
-            ->withCallback($request->input('callback'));
-    }*/
+        return view('admin.user.menu');
+    }
 }

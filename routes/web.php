@@ -29,11 +29,16 @@ Route::get('/editprofile', 'UserController@editprofile')->name('editprofile');
 
 Route::post('/saveprofile/{id?}', 'UserController@saveprofile')->name('saveprofile');
 
+Route::post('/cart', 'UserController@saveCart')->name('saveCart');
+
 Route::post('/popup','ModalController@popup')->name('popup');
 
 Route::get('/cartpage','UserController@cartpage')->name('cartpage');
+
+Route::delete('/removeItem/{id}','UserController@removeCartItem')->name('removeItem');
 
 Route::get('/history', 'UserController@history')->name('history');
 
 Route::get('/comment', 'UserController@comment')->name('comment');
 
+Route::get('/menu', 'UserController@menu')->name('menu');
