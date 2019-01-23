@@ -13,7 +13,7 @@ return [
     'shipping' => 'Shipping',
     'quality' => 'Quality',
     'category' => 'Category',
-    'quality' => 'Quality',
+    'quantity' => 'Quantity',
     'fastfood' => 'Fastfood',
     'dessert' => 'Dessert',
     'drink' => 'Drink',
@@ -41,7 +41,7 @@ return [
     'qualitymess' => 'All food are in good quality and we are responsible for your hungry',
     'toprate' => 'Top-Rated Food',
     'order' => 'Order',
-    'logout' => 'LogOut',
+    'logout' => 'Logout',
     'profile' => 'Profile',
     'changephoto' => 'Change Photo',
     'userid' => 'User ID',
@@ -55,5 +55,19 @@ return [
     'password' => 'Password',
     'save' => 'Save',
     'editprofile' => 'Edit Profile',
-    'history' => 'History'
+    'detail' => 'Detail',
+    'close' => 'Close',
+    'totalprice' => 'Total Price',
+    'price' => 'Price',
+    'history' => 'History',
+    'time' => 'Time',
+    'employee' => 'Employee',
+    'totals' => 'Totals',
+    'status' => 'Status',
+    'detail' => 'Detail',
+    'anythingelse' => 'Anything Else',
+    'stt' => 'Stt',
+    'filterby' => 'Filter by',
+
+
 ];
