@@ -13,7 +13,7 @@
 * Data changes
 -->
 
-# 関連URL (Relative URL)
+# Relative URL
 
 <!--
 * #issue ID
