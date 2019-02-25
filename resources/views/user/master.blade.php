@@ -32,7 +32,7 @@
     <div class="top">
         <div class="container">
             <nav class="navbar navbar-dark bg-faded navbar-fixed-top menutren">
-                <a class="navbar-brand logo" href="#">SOTA.food</a>
+                <a class="navbar-brand logo" href="home">SOTA.food</a>
                 <ul class="navbar-nav flex-md-row menutrenphai">
                     @if (Route::has('login'))
                         @auth
