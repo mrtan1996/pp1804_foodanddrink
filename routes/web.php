@@ -40,3 +40,5 @@ Route::delete('/removeItem/{id}','UserController@removeCartItem')->name('removeI
 Route::get('/history', 'UserController@history')->name('history');
 
 Route::get('/comment', 'UserController@comment')->name('comment');
+
+Route::get('/menu', 'UserController@menu')->name('menu');

@@ -159,4 +159,9 @@ class UserController extends Controller
     {
         return view('user.profile.comment');
     }
+
+    public function menu()
+    {
+        return view('admin.user.menu');
+    }
 }
