@@ -167,4 +167,9 @@ class UserController extends Controller
 
         return redirect()->route('home');
     }
+        
+    public function menu()
+    {
+        return view('admin.user.menu');
+    }
 }

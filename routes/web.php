@@ -42,3 +42,5 @@ Route::get('/history', 'UserController@history')->name('history');
 Route::get('/comment', 'UserController@comment')->name('comment');
 
 Route::get('/cartOrder', 'UserController@cartOrder')->name('cartOrder');
+
+Route::get('/menu', 'UserController@menu')->name('menu');

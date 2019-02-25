@@ -12,7 +12,7 @@
                         <h4 class="card-title">{{ $product->name }}</h4>
                         <p class="card-text">{{ $product->description }}</p>
                         <form name="addToCartForm">
-                            <button data-product-id="{{ $product->id }}" data-product-image="{{ $product->images }}" data-product-name="{{ $product->name }}" type="button" class="btn btn-primary detail-order" data-toggle="modal" data-target="#exampleModal">{{ trans('messages.detail') }}</button>
+                            <button data-product-id="{{ $product->id }}" data-product-name="{{ $product->name }}" data-product-price="{{ $product->prise }}" type="button" class="btn btn-primary detail-order" data-toggle="modal" data-target="#exampleModal">{{ trans('messages.detail') }}</button>
                             <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
@@ -58,6 +58,7 @@
         productImage = $(this).data('product-image');
         productId = $(this).data('product-id');
         var nameProduct = $(this).data('product-name');
+        var priceProduct = $(this).data('product-price');
         $(".detail-product").remove();
         $(".modal-body").append($("<p>", {
             class: "detail-product",
@@ -66,6 +67,14 @@
                 'color': 'black',
             }
         }).text('Name:' + nameProduct));
+        $(".modal-body").append($("<p>", {
+            class: "detail-product",
+            css: {
+                'padding-right' : '30px',
+                'float': 'right',
+                'color': 'black',
+            }
+        }).text('Price:' + priceProduct));
     });
     
     $('.submitbutton').click(function() {
