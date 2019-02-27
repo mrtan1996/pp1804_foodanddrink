@@ -14,8 +14,8 @@
                         <p class="card-text">{{ $product->description }}</p>
                         <form name="addToCartForm">
                             <button data-product-id="{{ $product->id }}" data-product-name="{{ $product->name }}" data-product-price="{{ $product->prise }}" type="button" class="btn btn-primary detail-order" data-toggle="modal" data-target="#exampleModal">{{ trans('messages.detail') }}</button>
-                            <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
+                            <div class="modal" id="exampleModal" tabindex="-1" roles="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" roles="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="exampleModalLabel">

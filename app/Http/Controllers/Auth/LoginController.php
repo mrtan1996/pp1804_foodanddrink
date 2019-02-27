@@ -56,7 +56,7 @@ class LoginController extends Controller
         ];
 
         if (Auth::attempt($auth)) {
-            if (Auth::user()->role == config('custom.role.admin')) {
+            if (Auth::user()->roles == config('custom.roles.admin')) {
                 return redirect()->route('users.index');
             }
             

@@ -1067,7 +1067,7 @@
                 {
                     "name": "Luís Otávio Cobucci Oblonczyk",
                     "email": "lcobucci@gmail.com",
-                    "role": "developer"
+                    "roles": "developer"
                 }
             ],
             "description": "A simple library to work with JSON Web Token and JSON Web Signature",
@@ -1339,7 +1339,7 @@
                     "name": "Tim Lytle",
                     "email": "tim@nexmo.com",
                     "homepage": "http://twitter.com/tjlytle",
-                    "role": "Developer"
+                    "roles": "Developer"
                 }
             ],
             "description": "PHP Client for using Nexmo's API.",
@@ -3106,7 +3106,7 @@
                 {
                     "name": "Tijs Verkoyen",
                     "email": "css_to_inline_styles@verkoyen.eu",
-                    "role": "Developer"
+                    "roles": "Developer"
                 }
             ],
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
@@ -3279,7 +3279,7 @@
                     "name": "Marcel Pociot",
                     "email": "marcel@beyondco.de",
                     "homepage": "https://beyondcode.de",
-                    "role": "Developer"
+                    "roles": "Developer"
                 }
             ],
             "description": "Symfony Var-Dump Server for Laravel",
@@ -3390,7 +3390,7 @@
                 {
                     "name": "Filipe Dobreira",
                     "homepage": "https://github.com/filp",
-                    "role": "Developer"
+                    "roles": "Developer"
                 }
             ],
             "description": "php error handling for cool kids",
@@ -3719,17 +3719,17 @@
                 {
                     "name": "Arne Blankerts",
                     "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "roles": "Developer"
                 },
                 {
                     "name": "Sebastian Heuer",
                     "email": "sebastian@phpeople.de",
-                    "role": "Developer"
+                    "roles": "Developer"
                 },
                 {
                     "name": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de",
-                    "role": "Developer"
+                    "roles": "Developer"
                 }
             ],
             "description": "Component for reading phar.io manifest information from a PHP Archive (PHAR)",
@@ -3766,17 +3766,17 @@
                 {
                     "name": "Arne Blankerts",
                     "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "roles": "Developer"
                 },
                 {
                     "name": "Sebastian Heuer",
                     "email": "sebastian@phpeople.de",
-                    "role": "Developer"
+                    "roles": "Developer"
                 },
                 {
                     "name": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de",
-                    "role": "Developer"
+                    "roles": "Developer"
                 }
             ],
             "description": "Library for handling version information and constraints",
@@ -4048,7 +4048,7 @@
                 {
                     "name": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "roles": "lead"
                 }
             ],
             "description": "Library that provides collection, processing, and rendering functionality for PHP code coverage information.",
@@ -4099,7 +4099,7 @@
                 {
                     "name": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "roles": "lead"
                 }
             ],
             "description": "FilterIterator implementation that filters files based on a list of suffixes.",
@@ -4141,7 +4141,7 @@
                 {
                     "name": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "roles": "lead"
                 }
             ],
             "description": "Simple template engine.",
@@ -4190,7 +4190,7 @@
                 {
                     "name": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "roles": "lead"
                 }
             ],
             "description": "Utility class for timing",
@@ -4321,7 +4321,7 @@
                 {
                     "name": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "roles": "lead"
                 }
             ],
             "description": "The PHP Unit Testing framework.",
@@ -4889,7 +4889,7 @@
                 {
                     "name": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "roles": "lead"
                 }
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
@@ -4930,7 +4930,7 @@
                 {
                     "name": "Arne Blankerts",
                     "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "roles": "Developer"
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",

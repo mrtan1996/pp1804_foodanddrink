@@ -19,7 +19,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout', 'Auth\LoginController@logout')->name('exit');
 
-Route::group(['prefix' => 'admin', 'middleware' => 'checkRole'], function() {
+Route::group(['prefix' => 'admin', 'middleware' => 'checkroles'], function() {
     Route::resource('users', 'UserController');
 });
 
