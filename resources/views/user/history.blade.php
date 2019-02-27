@@ -14,7 +14,7 @@
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                         <span id="search_concept">{{ trans('messages.filterby') }}</span>
                         </button>
-                        <ul class="dropdown-menu" role="menu">
+                        <ul class="dropdown-menu" roles="menu">
                             <li><a href="#order">{{ trans('messages.order') }}</a></li>
                             <li><a href="#employee">{{ trans('messages.employee') }}</a></li>
                             <li><a href="#status">{{ trans('messages.status') }}</a></li>
@@ -44,4 +44,4 @@
             </div>
         </div>
 </div>
-@stop
+@stop -->

@@ -125,10 +125,10 @@ class UserController extends Controller
 
         Cart::add(array(
             'id' => $product->id,
+            'image' => $request->image,
             'name' => $product->name,
             'price' => $product->prise,
             'quantity' => $request->quantity,
-            'image' => $product->images,
         ));
 
         return response()->json($product);
@@ -139,15 +139,16 @@ class UserController extends Controller
     {
         $cartCollection = Cart::getContent();
         $cartCollection->toArray();
+        $total = Cart::getTotal();
 
-        return view('user.cart', compact('cartCollection')); 
+        return view('user.cart', compact(['cartCollection','total'])); 
     }
 
     public function removeCartItem(Request $request, $id)
     {
         Cart::remove($id);
         
-        return redirect()->route(cartpage);
+        return redirect()->route('cartpage');
     }
     
     public function history()
@@ -160,6 +161,18 @@ class UserController extends Controller
         return view('user.profile.comment');
     }
 
+       public function admin()
+    {
+        return view('admin.master');
+    }
+
+        public function cartOrder()
+    {
+        Cart::clear();
+
+        return redirect()->route('home');
+    }
+        
     public function menu()
     {
         return view('admin.user.menu');
