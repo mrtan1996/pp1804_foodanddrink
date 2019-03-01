@@ -1,6 +1,5 @@
 @extends('user.master')
 @section('content')
-
 <div class="noidung p-4 text-sm-center">
     <div class="container">
         <h5 class="toprate">{{ trans('messages.toprate') }}</h5>
@@ -54,7 +53,9 @@
 {{-- end foodlist --}}
 <script type="text/javascript">
     var productId;
+    var productImage;
     $('.detail-order').click(function(){
+        productImage = $(this).data('product-image');
         productId = $(this).data('product-id');
         var nameProduct = $(this).data('product-name');
         var priceProduct = $(this).data('product-price');
@@ -75,7 +76,7 @@
             }
         }).text('Price:' + priceProduct));
     });
-
+    
     $('.submitbutton').click(function() {
         var quantity = $('[name=quantity]').val();
         var baseUrl = window.location.origin+window.location.pathname.split('/')[0] + '/';
@@ -86,6 +87,7 @@
             data: {
                 'product_id': productId, 
                 'quantity' : quantity,
+                'image' : productImage,
                 _token: $('meta[name="csrf-token"]').attr('content'),
             },
             
