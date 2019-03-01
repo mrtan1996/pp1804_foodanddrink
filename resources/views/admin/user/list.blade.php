@@ -34,7 +34,7 @@
     </thead>
     <tbody>
         @foreach($listUser as $user)
-        <tr class="gradeA even" roles="row">
+        <tr class="gradeA even" Role="row">
             <td class="sorting_1">{{ $user->name }}</td>
             <td>{{ $user->email }}</td>
             <td>

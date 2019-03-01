@@ -1,6 +1,6 @@
 <?php
 return [
-    'roles' => [
+    'role' => [
         'admin' => 1,
         'editor' => 2,
         'user' => 3,

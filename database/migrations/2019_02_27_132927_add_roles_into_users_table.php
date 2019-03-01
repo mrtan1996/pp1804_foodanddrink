@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddrolessIntoUsersTable extends Migration
+class AddRoleIntoUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddrolessIntoUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->integer('roless')->default(2);
+            $table->integer('role')->default(2);
             
         });
     }
@@ -26,6 +26,6 @@ class AddrolessIntoUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('roless');
+        Schema::dropIfExists('role');
     }
 }

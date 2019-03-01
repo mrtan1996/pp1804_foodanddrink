@@ -165,8 +165,8 @@ class UserController extends Controller
     {
         return view('admin.master');
     }
-
-        public function cartOrder()
+    
+    public function cartOrder()
     {
         Cart::clear();
 

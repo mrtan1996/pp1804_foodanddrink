@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class roles extends Model
+class Role extends Model
 
 
 {
-    public function roles() 
+    public function role() 
     {
         return $this->belongto(User::class);
     } 

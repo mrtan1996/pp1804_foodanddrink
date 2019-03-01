@@ -52,7 +52,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/logout">{{ trans('messages.logout') }}</a>
                             </li>
-                            @if (Auth::user()->roles == config('custom.roles.admin'))
+                            @if (Auth::user()->role == config('custom.role.admin'))
                                 <li>
                                     <a class="nav-link" href="/admin">admin</a>
                                 </li>                                 
@@ -246,8 +246,8 @@
         </div>
     </div>
 
-    <div class="modal fade" tabindex="-1" roles="dialog" aria-labelledby="loginModalLabel" id="loginModal">
-        <div class="modal-dialog" roles="document">
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" id="loginModal">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="loginModallabel">{{ trans('messages.signin')}}</h4>
@@ -266,7 +266,7 @@
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
                                 
                                 @if ($errors->has('email'))
-                                    <span class="invalid-feedback" roles="alert">
+                                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
@@ -280,7 +280,7 @@
                                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
                                 @if ($errors->has('password'))
-                                    <span class="invalid-feedback" roles="alert">
+                                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
