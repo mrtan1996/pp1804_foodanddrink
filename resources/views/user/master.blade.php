@@ -52,6 +52,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/logout">{{ trans('messages.logout') }}</a>
                             </li>
+                            @if (Auth::user()->role == config('custom.role.admin'))
+                                <li>
+                                    <a class="nav-link" href="/admin">admin</a>
+                                </li>                                 
+                            @endif           
                         @else
                             <li class="nav-item active">
                                 <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">{{ trans('messages.login') }} <span class="sr-only">(current)</span></a>

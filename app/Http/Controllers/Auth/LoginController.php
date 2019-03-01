@@ -54,12 +54,11 @@ class LoginController extends Controller
             'email' => $login['email'],
             'password' => $login['password'],
         ];
-
+        
         if (Auth::attempt($auth)) {
             if (Auth::user()->role == config('custom.role.admin')) {
                 return redirect()->route('users.index');
             }
-            
             return redirect()->route('home');
         }
 

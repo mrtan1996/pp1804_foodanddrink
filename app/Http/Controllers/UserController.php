@@ -161,6 +161,11 @@ class UserController extends Controller
         return view('user.profile.comment');
     }
 
+       public function admin()
+    {
+        return view('admin.master');
+    }
+    
     public function cartOrder()
     {
         Cart::clear();

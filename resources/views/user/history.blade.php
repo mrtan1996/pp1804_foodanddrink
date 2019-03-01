@@ -149,17 +149,18 @@
         <div class="col-xs-8 col-xs-offset-2">
             <div class="input-group">
                 <div class="input-group-btn search-panel">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    <span id="search_concept">Filter by</span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#madonhang">Mã đơn hàng</a></li>
-                        <li><a href="#nhanvien">Nhân viên</a></li>
-                        <li><a href="#trangthai">Trạng thái</a></li>
-                        <li><a href="#diadiem">Địa điểm</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#all">Anything</a></li>
-                    </ul>
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span id="search_concept">{{ trans('messages.filterby') }}</span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#order">{{ trans('messages.order') }}</a></li>
+                            <li><a href="#employee">{{ trans('messages.employee') }}</a></li>
+                            <li><a href="#status">{{ trans('messages.status') }}</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#all">{{ trans('messages.anythingelse') }}</a></li>
+                        </ul>
+                    </div>    
                 </div>
                 <input type="hidden" name="search_param" value="all" id="search_param">         
                 <input type="text" class="form-control" name="x" placeholder="Search term...">
@@ -168,19 +169,18 @@
                 </span>
             </div>
         </div>
-        <div class="row"></div>
+    </div>
+    <div class="row"></div>
+    <div class="col-xs-12 col-xs-offset-2">
         <div class="history-table">
             <div class="history-table-row history-table-heading">
-                <div class="history-table-cell stt">STT</div>
-                <div class="history-table-cell madonhang">Mã đơn hàng</div>
-                <div class="history-table-cell thoigian">Thời gian</div>
-                <div class="history-table-cell diadiem">Địa điểm</div>
-                <div class="history-table-cell nhanvien">Nhân viên</div>
-                <div class="history-table-cell tongtien">Tổng tiền</div>
-                <div class="history-table-cell trangthai">Trạng thái</div>
-                <div class="history-table-cell chitiet">Chi tiết</div>
+                <div class="history-table-cell stt">{{ trans('messages.stt') }}</div>
+                <div class="history-table-cell time">{{ trans('messages.time') }}</div>
+                <div class="history-table-cell employee">{{ trans('messages.employee') }}</div>
+                <div class="history-table-cell totals">{{ trans('messages.totals') }}</div>
+                <div class="history-table-cell status">{{ trans('messages.status') }}</div>
+                <div class="history-table-cell detail">{{ trans('messages.detail') }}</div>
             </div>
         </div>
-    </div>
 </div>
 @stop -->

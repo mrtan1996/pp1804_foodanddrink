@@ -46,4 +46,12 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    function confirm_delete() {
+        return confirm('{{ trans('messages.confirm') }}');
+    }
+</script>
+    <div class="clearfix b-btn-mobile">
+        <a href="javascript:void(0);" onclick="product.place_order();" class="btn btn-danger btn-lg btn-dk">đặt hàng</a>
+    </div>
 @stop
