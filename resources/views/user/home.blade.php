@@ -25,6 +25,8 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
+                                            <div class="modal-detail">
+                                            </div>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ trans('messages.close' )}}</button>
@@ -60,14 +62,14 @@
         var nameProduct = $(this).data('product-name');
         var priceProduct = $(this).data('product-price');
         $(".detail-product").remove();
-        $(".modal-body").append($("<p>", {
+        $(".modal-detail").append($("<p>", {
             class: "detail-product",
             css: {
                 'float': 'left',
                 'color': 'black',
             }
         }).text('Name:' + nameProduct));
-        $(".modal-body").append($("<p>", {
+        $(".modal-detail").append($("<p>", {
             class: "detail-product",
             css: {
                 'padding-right' : '30px',

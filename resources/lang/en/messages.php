@@ -68,6 +68,10 @@ return [
     'anythingelse' => 'Anything Else',
     'stt' => 'Stt',
     'filterby' => 'Filter by',
-
-
+    'name' => 'Name',
+    'address' => 'Address',
+    'city' => 'City',
+    'tel' => 'Telephone',
+    'district' => 'District',
+    
 ];

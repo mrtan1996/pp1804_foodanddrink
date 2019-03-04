@@ -46,3 +46,5 @@ Route::get('/menu', 'UserController@menu')->name('menu');
 Route::get('/admin', 'UserController@admin')->name('admin');
 
 Route::get('/cartOrder', 'UserController@cartOrder')->name('cartOrder');
+
+Route::get('/detailOrder', 'OrderController@guestOrder')->name('detailOrder');
