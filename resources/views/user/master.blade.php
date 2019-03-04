@@ -66,6 +66,9 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ trans('messages.register') }} <span class="sr-only">(current)</span></a>
                                 </li>
                             @endif
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/cartpage">{{ trans('messages.cart') }}</a>
+                            </li>
                         @endauth
                     @endif   
                 </ul>   

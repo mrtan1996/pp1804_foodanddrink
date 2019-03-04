@@ -41,7 +41,7 @@
                 <div class="price b-mobile b-right clearfix">
                     <div class="totalprice">{{ $total }}.000VND</div>
                 </div>
-                <a href="cartOrder" onclick="product.place_order();" class="btn btn-danger btn-lg btn-dk">{{ trans('messages.order') }}</a>
+                <a href="detailOrder" onclick="product.place_order();" class="btn btn-danger btn-lg btn-dk">{{ trans('messages.order') }}</a>
             </div>
         </div>
     </div>
@@ -51,7 +51,4 @@
         return confirm('{{ trans('messages.confirm') }}');
     }
 </script>
-    <div class="clearfix b-btn-mobile">
-        <a href="javascript:void(0);" onclick="product.place_order();" class="btn btn-danger btn-lg btn-dk">đặt hàng</a>
-    </div>
 @stop
