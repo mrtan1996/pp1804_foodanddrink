@@ -5,12 +5,13 @@ use App\Model\Rate;
 use App\Model\Product;
 use App\Model\User;
 
-
 use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
     protected $table = 'orders';
+
+    protected $fillable = ['user_id', 'total', 'address', 'phone'];
 
     public function product()
     {
@@ -24,6 +25,7 @@ class Order extends Model
     
     public function rate()
     {
-        return $this->belongsTo(rate::class);
+        return $this->belongsTo(Rate::class);
     }
+  
 }

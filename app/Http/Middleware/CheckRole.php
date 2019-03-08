@@ -16,7 +16,6 @@ class CheckRole
      */
     public function handle($request, Closure $next)
     {
-        
         /*khi dang nhap thanh cong: Auth::check()
         Role = admin*/
         if (Auth::check() && Auth::user()->role == config('custom.role.admin'))
