@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('user.home');
-});
-
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout', 'Auth\LoginController@logout')->name('exit');
@@ -22,29 +18,18 @@ Route::get('/logout', 'Auth\LoginController@logout')->name('exit');
 Route::group(['prefix' => 'admin', 'middleware' => 'CheckRole'], function() {
     Route::resource('users', 'UserController');
 });
-
 Route::get('/profile', 'UserController@profile')->name('profile');
-
 Route::get('/editprofile', 'UserController@editprofile')->name('editprofile');
-
 Route::post('/saveprofile/{id?}', 'UserController@saveprofile')->name('saveprofile');
-
 Route::post('/cart', 'UserController@saveCart')->name('saveCart');
-
 Route::post('/popup','ModalController@popup')->name('popup');
-
 Route::get('/cartpage','UserController@cartpage')->name('cartpage');
-
 Route::delete('/removeItem/{id}','UserController@removeCartItem')->name('removeItem');
-
 Route::get('/history', 'UserController@history')->name('history');
-
 Route::get('/comment', 'UserController@comment')->name('comment');
-
 Route::get('/menu', 'UserController@menu')->name('menu');
-
 Route::get('/admin', 'UserController@admin')->name('admin');
-
 Route::get('/cartOrder', 'UserController@cartOrder')->name('cartOrder');
-
 Route::get('/detailOrder', 'OrderController@guestOrder')->name('detailOrder');
+Route::get('/', 'HomeController@index')->name('home');
+
